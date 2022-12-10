@@ -10,3 +10,5 @@ export const colors = [
   "#B69FFB",
   "#84B6FB",
 ]
+
+export const DATE_OF_NEW_YEAR = new Date(2023, 0, 1)

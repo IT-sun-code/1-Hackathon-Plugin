@@ -6,8 +6,8 @@ export class ShapeModule extends Module {
   #maxSize
   #screenWidth
   #screenHeight
-  constructor() {
-    super('shape', 'Создать фигуру')
+  constructor(type, text) {
+    super(type, text)
     this.#minSize = 100
     this.#maxSize = 500
     this.#screenWidth = document.body.clientWidth
