@@ -4,7 +4,8 @@ export class ClicksModule extends Module {
     #countOneClick
     #countDoubleClick
     #timer
-    super(type, text){
+    constructor(type, text) {
+        super(type, text)
         this.#countOneClick = 0
         this.#countDoubleClick = 0
         this.#timer = 3000

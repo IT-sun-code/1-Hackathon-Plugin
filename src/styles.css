@@ -66,6 +66,9 @@ img {
 .main-page {
     margin: 20px 0 0 60px;
 }
+.main-page.hide {
+    display: none;
+}
 
 .heading {
     color: #557EFF;
