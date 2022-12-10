@@ -4,27 +4,24 @@ import {BackgroundModule} from './modules/background.module'
 import {ClicksModule} from './modules/clicks.module'
 import {ShapeModule} from './modules/shape.module'
 // import {TimerModule} from './modules/timer.module'
+import {mainPage} from './constants'
 
+const startBtn = document.querySelector('.start')
+startBtn.addEventListener('click', () => {
+  mainPage.classList.add('hide')
+})
 
 const menu = new ContextMenu('.menu')
-const backgroundMode = new BackgroundModule('one', 'change background')
+
+const backgroundMode = new BackgroundModule('background', 'Случайный фон')
 menu.add(backgroundMode)
 
-const click = new ClicksModule('two', 'count clicks')
-menu.add(click)
+const clicksCounter = new ClicksModule('click', 'Аналитика кликов')
+menu.add(clicksCounter)
 
-const shape = new ShapeModule('three', 'random figure')
-menu.add(shape)
+const randomShape = new ShapeModule('shape', 'Случайная фигура')
+menu.add(randomShape)
 
-const btn = document.querySelector('button')
-btn.addEventListener('click', event => {
-  const mainPage = document.querySelector('.main-page')
-  mainPage.classList.add('hide')
+// const newYearTimer = new TimerModule('newYear', 'Таймер до Нового года' )
+// menu.add(newYearTimer)
 
-  menu.open()
-  menu.listenMenu()
-
-// const timer = new TimerModule('four', 'time until the new year')
-// menu.add(timer)
-
-})
