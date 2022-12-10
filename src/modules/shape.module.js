@@ -2,19 +2,23 @@ import {Module} from '../core/module'
 import { random, getRandomColor } from '../utils'
 
 export class ShapeModule extends Module {
+  #minSize
+  #maxSize
+  #screenWidth
+  #screenHeight
   constructor() {
     super('shape', 'Создать фигуру')
-    this.minSize = 100
-    this.maxSize = 500
-    this.screenWidth = document.body.clientWidth
-    this.screenHeight = document.body.clientHeight
+    this.#minSize = 100
+    this.#maxSize = 500
+    this.#screenWidth = document.body.clientWidth
+    this.#screenHeight = document.body.clientHeight
   }
 
   #generateShape() {
-    const width = random(this.minSize, this.maxSize)
-    const height = random(this.minSize, this.maxSize)
-    const coordX = random(0,this.screenWidth - width)
-    const coordY = random(0,this.screenHeight - height)
+    const width = random(this.#minSize, this.#maxSize)
+    const height = random(this.#minSize, this.#maxSize)
+    const coordX = random(0,this.#screenWidth - width)
+    const coordY = random(0,this.#screenHeight - height)
     const color = getRandomColor()
     const borderRadius = random(0, 50)
 
