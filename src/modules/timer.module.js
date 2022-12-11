@@ -4,7 +4,7 @@ import {DATE_OF_NEW_YEAR} from '../constants'
 
 
 export class TimerModule extends Module {
-  #data
+  #date
   #taimerConteiner
   #taimerTextHTML
   constructor(type, text) {
@@ -15,7 +15,7 @@ export class TimerModule extends Module {
   }
 
   #getTimerContent() {
-    return Dates.leftUntilNewYear(new Date(2023, 0, 0), this.#data)
+    return Dates.leftUntilNewYear(new Date(2023, 0, 0), this.#date)
   }
  
   #enableDateUpdate() {
