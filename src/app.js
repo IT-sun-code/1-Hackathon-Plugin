@@ -17,7 +17,7 @@ const menu = new ContextMenu('.menu')
 const backgroundMode = new BackgroundModule('background', 'Случайный фон')
 menu.add(backgroundMode)
 
-const game = new GameModule('four', 'random bug')
+const game = new GameModule('game', 'Поймать жука')
 menu.add(game)
 
 const clicksCounter = new ClicksModule('click', 'Аналитика кликов')
