@@ -12,3 +12,5 @@ export const colors = [
 ]
 
 export const DATE_OF_NEW_YEAR = new Date(2023, 0, 1)
+
+export const mainPage = document.querySelector('.main-page')
