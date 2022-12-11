@@ -46,7 +46,7 @@ body {
     color: #557eff;
 }
 
-img {
+.main-img {
     display: block;
     position: absolute;
     z-index: -1;

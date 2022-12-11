@@ -1,0 +1,45 @@
+.container-ny {
+    max-width: 900px;
+    margin: 0 auto;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-content: space-between;*/
+}
+
+.container-ny.hidden {
+    display: none;
+}
+
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+
+}
+.main-title {
+    color: #3D4F88;
+}
+
+.newyear-image {
+    /*display: block;*/
+    width: 400px;
+    height: 400px;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.timer-text {
+    color: #3D4F88;
+    font-size: 40px;
+}
