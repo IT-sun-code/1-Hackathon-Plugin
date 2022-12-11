@@ -1,9 +1,6 @@
 .container-ny {
     max-width: 900px;
     margin: 0 auto;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-content: space-between;*/
 }
 
 .container-ny.hidden {
