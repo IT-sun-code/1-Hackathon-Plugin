@@ -16,7 +16,7 @@ export class ContextMenu extends Menu {
       }
     })
 
-    document.body.addEventListener('click', event => {
+    document.body.addEventListener('click', event => {      
       if (event.target.offsetParent !== this.el) {
         this.close()
       }
@@ -26,8 +26,7 @@ export class ContextMenu extends Menu {
         const itemDataValue = isSelectedItem.dataset.type
         this.#currentSelectedItem = this.#moduleItems.find(
           (item) => item.type === itemDataValue
-        )
-
+        )        
         this.#currentSelectedItem.trigger()
       }
     })
