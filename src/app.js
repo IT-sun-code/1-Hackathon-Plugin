@@ -3,7 +3,9 @@ import {ContextMenu} from './menu'
 import {BackgroundModule} from './modules/background.module'
 import {ClicksModule} from './modules/clicks.module'
 import {ShapeModule} from './modules/shape.module'
-// import {TimerModule} from './modules/timer.module'
+import './modules/newYearTimer/style-ny.css'
+import {newYearTimerModule} from './modules/newYearTimer/newYearTimer.module'
+
 import {GameModule} from './modules/game.module'
 import {mainPage} from './constants'
 import {TeammatesModule} from './modules/teammates.module'
@@ -27,8 +29,8 @@ menu.add(clicksCounter)
 const randomShape = new ShapeModule('shape', 'Случайная фигура')
 menu.add(randomShape)
 
+const newYearTimer = new newYearTimerModule('newYear', 'Таймер до Нового года' )
+menu.add(newYearTimer)
+
 const teammates = new TeammatesModule('teammates', 'Участники команды')
 menu.add(teammates)
-
-// const newYearTimer = new TimerModule('newYear', 'Таймер до Нового года' )
-// menu.add(newYearTimer)
