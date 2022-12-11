@@ -4,6 +4,7 @@ import {BackgroundModule} from './modules/background.module'
 import {ClicksModule} from './modules/clicks.module'
 import {ShapeModule} from './modules/shape.module'
 // import {TimerModule} from './modules/timer.module'
+import {GameModule} from './modules/game.module'
 import {mainPage} from './constants'
 
 const startBtn = document.querySelector('.start')
@@ -16,6 +17,9 @@ const menu = new ContextMenu('.menu')
 const backgroundMode = new BackgroundModule('background', 'Случайный фон')
 menu.add(backgroundMode)
 
+const game = new GameModule('four', 'random bug')
+menu.add(game)
+
 const clicksCounter = new ClicksModule('click', 'Аналитика кликов')
 menu.add(clicksCounter)
 
@@ -24,4 +28,3 @@ menu.add(randomShape)
 
 // const newYearTimer = new TimerModule('newYear', 'Таймер до Нового года' )
 // menu.add(newYearTimer)
-

@@ -7,3 +7,13 @@ export function random(min, max) {
 export function getRandomColor() {
   return colors[random(0, colors.length - 1)]
 }
+
+export async function remove(element, time) {
+  element.style.transition = "background-color 1s"
+  await new Promise(resolve => {
+    setTimeout(() => resolve(), time - 1000)
+  })
+  element.style.backgroundColor = "transparent"
+  await new Promise(resolve => setTimeout(() => resolve(), 1000)) 
+  element.remove()
+}
