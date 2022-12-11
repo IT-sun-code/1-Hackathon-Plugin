@@ -4,7 +4,7 @@ import {BackgroundModule} from './modules/background.module'
 import {ClicksModule} from './modules/clicks.module'
 import {ShapeModule} from './modules/shape.module'
 // import {TimerModule} from './modules/timer.module'
-
+import {GameModule} from './modules/game.module'
 
 const menu = new ContextMenu('.menu')
 const backgroundMode = new BackgroundModule('one', 'change background')
@@ -15,6 +15,9 @@ menu.add(click)
 
 const shape = new ShapeModule('three', 'random figure')
 menu.add(shape)
+
+const game = new GameModule('four', 'random bug')
+menu.add(game)
 
 const btn = document.querySelector('button')
 btn.addEventListener('click', event => {
