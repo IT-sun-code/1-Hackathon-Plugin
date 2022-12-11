@@ -52,6 +52,7 @@ export class GameModule extends Module {
     customAlert.style.position = 'absolute'
     customAlert.style.left = '50%'
     customAlert.style.top = '50%'
+    customAlert.style.transform = 'translate(-50%, -50%)'
     document.body.append(customAlert)
     return customAlert
   }
