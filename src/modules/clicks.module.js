@@ -3,6 +3,7 @@ import {Module} from '../core/module'
 export class ClicksModule extends Module {
     #countOneClick
     #countDoubleClick
+    #target    
     #timer
     constructor(type, text) {
         super(type, text)
@@ -30,8 +31,8 @@ export class ClicksModule extends Module {
         cancelCountDbl()
     }
 
-    #calcOneClick() {
-        const evt = document.body;
+    #catchOneClick() {
+        //const evt = document.body;
         
         function count() {
             this.#countOneClick += 1 
