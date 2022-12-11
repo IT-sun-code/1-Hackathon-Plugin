@@ -8,6 +8,7 @@ import {newYearTimerModule} from './modules/newYearTimer/newYearTimer.module'
 
 import {GameModule} from './modules/game.module'
 import {mainPage} from './constants'
+import {TeammatesModule} from './modules/teammates.module'
 
 const startBtn = document.querySelector('.start')
 startBtn.addEventListener('click', () => {
@@ -30,3 +31,6 @@ menu.add(randomShape)
 
 const newYearTimer = new newYearTimerModule('newYear', 'Таймер до Нового года' )
 menu.add(newYearTimer)
+
+const teammates = new TeammatesModule('teammates', 'Участники команды')
+menu.add(teammates)

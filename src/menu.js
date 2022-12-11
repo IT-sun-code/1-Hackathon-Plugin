@@ -11,7 +11,7 @@ export class ContextMenu extends Menu {
 
     document.body.addEventListener('contextmenu', event => {
       event.preventDefault()
-      if (mainPage.className === 'main-page hide') {
+      if (mainPage.classList.contains('hide')) {
         this.open(event.clientX, event.clientY)
       }
     })

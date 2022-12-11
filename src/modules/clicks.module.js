@@ -12,13 +12,13 @@ export class ClicksModule extends Module {
     }
 
     async #getCountClick() {
-        
+
         const cancelCountOne = this.#calcOneClick()
         const cancelCountDbl = this.#calcDblClick()
 
-        const promise = new Promise(resolve => {         
-            setTimeout(() => {                                   
-                resolve({cntOneClick: this.#countOneClick, cntDblClick: this.#countDoubleClick})         
+        const promise = new Promise(resolve => {
+            setTimeout(() => {
+                resolve({cntOneClick: this.#countOneClick, cntDblClick: this.#countDoubleClick})
             }, this.#timer)
         })
         const result = await promise
@@ -32,16 +32,16 @@ export class ClicksModule extends Module {
 
     #calcOneClick() {
         const evt = document.body;
-        
+
         function count() {
             this.#countOneClick += 1 
         }
         const boundCount = count.bind(this)
-       
+
         evt.addEventListener("click", boundCount)
 
         return () => evt.removeEventListener("click", boundCount)
-        
+
     }
 
     #calcDblClick() {
@@ -54,7 +54,7 @@ export class ClicksModule extends Module {
         const boundCount = count.bind(this)
 
         evt.addEventListener("dblclick", boundCount)
-        
+
         return () => evt.removeEventListener("dblclick", boundCount)
     }
 
@@ -62,6 +62,6 @@ export class ClicksModule extends Module {
         this.#countOneClick = 0
         this.#countDoubleClick = 0
 
-        this.#getCountClick()       
+        this.#getCountClick()
     }
 }
