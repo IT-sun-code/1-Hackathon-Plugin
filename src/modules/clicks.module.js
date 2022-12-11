@@ -4,7 +4,6 @@ export class ClicksModule extends Module {
     #countOneClick
     #countDoubleClick
     #target
-    #init
     #timer
     constructor(type, text) {
         super(type, text)
@@ -52,10 +51,9 @@ export class ClicksModule extends Module {
         // evt.addEventListener("click", func.call())
        
         evt.addEventListener("click", () => {
-            if (this.#target) this.#countOneClick+=1
-           
-            
+            if (this.#target) this.#countOneClick+=1 
         })
+
         evt.removeEventListener("click", () => {
             if (this.#target) this.#countOneClick+=1        
             
@@ -66,12 +64,12 @@ export class ClicksModule extends Module {
     #calcDblClick() {
         const evt = document.body;
 
-
         evt.addEventListener("dblclick", () => {
             if (this.#target) this.#countDoubleClick+=1
             if (this.#countOneClick>0) this.#countOneClick -= 2
             
         })
+        
         evt.removeEventListener("dblclick", () => {
             if (this.#target) this.#countDoubleClick+=1
             if (this.#countOneClick>0) this.#countOneClick -= 2
