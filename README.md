@@ -1,1 +1,1 @@
-# 1-hachaton-plugin
+# 1-hackathon-plugin
